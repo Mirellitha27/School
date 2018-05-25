@@ -16,5 +16,6 @@
     <string name="action_facebook">Facebook</string>
     <string name="action_google">Google</string>
     <string name="title_crea_cuenta">Crear cuenta</string>
+    <string name="title_search_teacher">Busqueda por materia</string>
 
 </resources>
