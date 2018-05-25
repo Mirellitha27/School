@@ -8,4 +8,7 @@
     <color name="colorSecondaryText">#757575</color>
     <color name="colorIcons">#FFFFFF</color>
     <color name="colorDivider">#BDBDBD</color>
+    <color name="colorGrey500">#9E9E9E</color>
+    <color name="btnfacebook">#4260B4</color>
+    <color name="btnGoogle">#EF2219</color>
 </resources>
