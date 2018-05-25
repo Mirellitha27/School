@@ -1,4 +1,6 @@
 package mireya.com.school.domain.login.presenter;
 
-public interface LoginPresenter {
+import mireya.com.school.domain.login.view.LoginView;
+
+public interface LoginPresenter extends LoginView {
 }

@@ -19,9 +19,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".domain.chat.view.ChatFragment" />
-        <activity android:name=".domain.subject.view.SubjectFragment" />
-        <activity android:name=".domain.teacher.view.TeacherFragment"></activity>
+
+        <activity android:name=".domain.login.view.LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

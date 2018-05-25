@@ -1,4 +1,11 @@
 package mireya.com.school.domain.login.interactor;
 
-public class LoginInteractorImpl {
+import mireya.com.school.domain.login.presenter.LoginPresenter;
+
+public class LoginInteractorImpl implements LoginInteractor {
+    private LoginPresenter presenter;
+
+    public LoginInteractorImpl(LoginPresenter presenter) {
+        this.presenter = presenter;
+    }
 }
