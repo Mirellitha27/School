@@ -41,7 +41,7 @@ public class TeacherFragment extends Fragment implements TeacherFragmentView {
     }
 
     private void setUpView(View view) {
-        recyclerView = view.findViewById(R.id.recyclerView);
+        /*recyclerView = view.findViewById(R.id.recyclerView);
 
             teacherData = new ArrayList<>();
             teacherData.add(new TeacherData("Mireya Jimenez", "Developed Android"));
@@ -50,7 +50,7 @@ public class TeacherFragment extends Fragment implements TeacherFragmentView {
 
         recyclerView.setHasFixedSize(true);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false);
-        recyclerView.setLayoutManager(linearLayoutManager);
+        recyclerView.setLayoutManager(linearLayoutManager);*/
     }
 
     @Override

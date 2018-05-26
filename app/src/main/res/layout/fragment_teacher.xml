@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -25,15 +26,16 @@
     <android.support.v7.widget.CardView
         android:id="@+id/cardSearch"
         android:layout_width="match_parent"
-        android:layout_height="45dp"
+        android:layout_height="60dp"
         android:layout_marginEnd="32dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="164dp"
+        android:layout_marginTop="156dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        card_view:cardCornerRadius="6dp">
+        card_view:cardCornerRadius="6dp"
+        tools:ignore="MissingConstraints">
 
         <EditText
             android:id="@+id/edbuscador"
@@ -42,11 +44,13 @@
             android:layout_gravity="center"
             android:background="@drawable/btnround"
             android:hint="@string/title_search_teacher"
+            android:gravity="center"
             android:imeActionId="6"
             android:imeOptions="actionUnspecified"
             android:inputType="text"
             android:maxLines="1"
-            android:singleLine="true" />
+            android:singleLine="true"
+            style="@style/textSecondary"/>
     </android.support.v7.widget.CardView>
 
     <android.support.v7.widget.RecyclerView
@@ -59,5 +63,6 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardSearch"
-        app:layout_constraintVertical_bias="0.008"></android.support.v7.widget.RecyclerView>
+        app:layout_constraintVertical_bias="0.008">
+    </android.support.v7.widget.RecyclerView>
 </android.support.constraint.ConstraintLayout>
