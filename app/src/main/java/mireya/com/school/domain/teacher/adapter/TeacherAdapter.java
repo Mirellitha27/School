@@ -14,11 +14,9 @@ import mireya.com.school.R;
 import mireya.com.school.domain.teacher.data.TeacherData;
 
 public class TeacherAdapter extends RecyclerView.Adapter<TeacherAdapter.ViewHolder> {
-    private Context context;
     private List<TeacherData> teacherData;
 
-    public TeacherAdapter(Context context, List<TeacherData> teacherData) {
-        this.context = context;
+    public TeacherAdapter(List<TeacherData> teacherData) {
         this.teacherData = teacherData;
     }
 
@@ -31,8 +29,10 @@ public class TeacherAdapter extends RecyclerView.Adapter<TeacherAdapter.ViewHold
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        holder.nombre.setText("hola");
-        holder.especialidad.setText("que hay ");
+        /*holder.nombre.setText("hola");
+        holder.especialidad.setText("que hay ");*/
+        holder.nombre.setText(teacherData.get(position).getNombre());
+        holder.especialidad.setText(teacherData.get(position).getEspecialidad());
     }
 
     @Override

@@ -3,6 +3,7 @@ package mireya.com.school.domain.login.view;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 
@@ -11,6 +12,7 @@ import mireya.com.school.domain.account.create.view.CreateAccountActivity;
 import mireya.com.school.domain.login.presenter.LoginPresenter;
 import mireya.com.school.domain.login.presenter.LoginPresenterImpl;
 import mireya.com.school.domain.main.view.MainActivity;
+import mireya.com.school.utils.Keyboard.KeyboardUtil;
 
 public class LoginActivity extends AppCompatActivity implements LoginView {
 
@@ -50,4 +52,12 @@ public class LoginActivity extends AppCompatActivity implements LoginView {
             }
         });
     }
+
+
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        KeyboardUtil.hide(this);
+        return true;
+    }
+
 }

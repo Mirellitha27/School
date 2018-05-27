@@ -5,11 +5,15 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.MotionEvent;
+
+import java.util.Objects;
 
 import mireya.com.school.R;
 import mireya.com.school.domain.account.create.presenter.CreateAccountPresenter;
 import mireya.com.school.domain.account.create.presenter.CreateAccountPresenterImpl;
 import mireya.com.school.domain.login.view.LoginActivity;
+import mireya.com.school.utils.Keyboard.KeyboardUtil;
 
 public class CreateAccountActivity extends AppCompatActivity implements CreateAccountView{
 
@@ -31,7 +35,7 @@ public class CreateAccountActivity extends AppCompatActivity implements CreateAc
     private void setUpView() {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle(" ");
     }
 
@@ -43,6 +47,12 @@ public class CreateAccountActivity extends AppCompatActivity implements CreateAc
                 finish();
                 break;
         }
+        return true;
+    }
+
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        KeyboardUtil.hide(this);
         return true;
     }
 }

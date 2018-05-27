@@ -5,5 +5,5 @@ import java.util.List;
 import mireya.com.school.domain.teacher.data.TeacherData;
 
 public interface TeacherFragmentView {
-    void setDataAdapter(List<TeacherData> teacherData);
+
 }

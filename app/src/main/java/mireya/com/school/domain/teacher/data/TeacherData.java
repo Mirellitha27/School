@@ -12,8 +12,6 @@ public class TeacherData {
         this.especialidad = especialidad;
     }
 
-
-
     public String getNombre() {
         return nombre;
     }

@@ -16,8 +16,4 @@ public class TeacherPresenterImpl implements TeacherPresenter {
         interactor = new TeacherInteractorImpl(this);
     }
 
-    @Override
-    public void setDataAdapter(List<TeacherData> teacherData) {
-        view.setDataAdapter(teacherData);
-    }
 }
