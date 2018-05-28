@@ -40,9 +40,10 @@ public class TeacherFragment extends Fragment implements TeacherFragmentView {
 
     private void setUpView(View view) {
         List<TeacherData> teacherData = new ArrayList<>();
-        teacherData.add(new TeacherData("Mireya Jimenez", "Developed Android"));
-        teacherData.add(new TeacherData("Luis Castillo Zamorano", "Developed IOS"));
-        teacherData.add(new TeacherData("Rott Castillo", "No hacer nada"));
+        teacherData.add(new TeacherData("Mireya Jimenez Perez", "Programación Android"));
+        teacherData.add(new TeacherData("Luis Manuel Castillo", "Programación IOS"));
+        teacherData.add(new TeacherData("Dolores Zamorano", "Diseño Arquitectura"));
+        teacherData.add(new TeacherData("José Ricardo Zamorano", "Construccion"));
 
         RecyclerView recyclerView = view.findViewById(R.id.recyclerView);
         recyclerView.setHasFixedSize(true);
