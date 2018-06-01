@@ -80,45 +80,14 @@
             android:text="Ana Mireya Jimenez" />
     </android.support.v7.widget.CardView>
 
-    <android.support.v7.widget.CardView
-        android:id="@+id/cvData"
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="32dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
-        app:cardCornerRadius="6dp"
-        app:cardElevation="@dimen/space_min"
+        android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cvName"
-        android:orientation="horizontal">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_margin="10dp">
-
-            <TextView
-                android:id="@+id/tvSubject"
-                style="@style/textPrimary"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Programacion Android" />
-
-            <TextView
-                android:id="@+id/tvYear"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Año - 2018"
-                style="@style/textSecondary"/>
-
-        </LinearLayout>
-
-
-
-    </android.support.v7.widget.CardView>
+        app:layout_constraintTop_toBottomOf="@+id/cvName" />
 
 
 </android.support.constraint.ConstraintLayout>

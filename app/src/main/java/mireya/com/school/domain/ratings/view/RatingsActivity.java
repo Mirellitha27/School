@@ -18,7 +18,6 @@ import mireya.com.school.domain.ratings.presenter.RatingsPresenterImpl;
 
 public class RatingsActivity extends AppCompatActivity implements RatingsView{
     private RatingsPresenter presenter;
-    List<RatingsData> ratingsData;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +25,7 @@ public class RatingsActivity extends AppCompatActivity implements RatingsView{
         setContentView(R.layout.activity_ratings);
         setupVariable();
         setUpView();
-        ratingsData = new ArrayList<>();
+        /*ratingsData = new ArrayList<>();
         ratingsData.add(new RatingsData("80", "primer parcial"));
         ratingsData.add(new RatingsData("70", "Segundo parcial"));
 
@@ -45,11 +44,13 @@ public class RatingsActivity extends AppCompatActivity implements RatingsView{
     private void setUpView() {
         List<RatingsData> teacherData = new ArrayList<>();
         teacherData.add(new RatingsData("80", "primer parcial"));
-        teacherData.add(new RatingsData("70 Castillo Zamorano", "Segundo parcial"));
+        teacherData.add(new RatingsData("70", "Segundo parcial"));
+        teacherData.add(new RatingsData("80", "tercer parcial"));
+        teacherData.add(new RatingsData("70", "calificacion final"));
 
         RecyclerView recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setHasFixedSize(true);
-        GridLayoutManager linearLayoutManager = new GridLayoutManager(this, 3);
+        GridLayoutManager linearLayoutManager = new GridLayoutManager(this, 2);
         recyclerView.setLayoutManager(linearLayoutManager);
         RecyclerView.Adapter adapter = new RatingsAdapter(teacherData);
         recyclerView.setAdapter(adapter);

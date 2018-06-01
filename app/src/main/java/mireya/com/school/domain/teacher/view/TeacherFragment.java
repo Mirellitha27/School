@@ -49,7 +49,7 @@ public class TeacherFragment extends Fragment implements TeacherFragmentView {
         recyclerView.setHasFixedSize(true);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false);
         recyclerView.setLayoutManager(linearLayoutManager);
-        RecyclerView.Adapter adapter = new TeacherAdapter(teacherData);
+        RecyclerView.Adapter adapter = new TeacherAdapter(getContext(), teacherData);
         recyclerView.setAdapter(adapter);
     }
 
