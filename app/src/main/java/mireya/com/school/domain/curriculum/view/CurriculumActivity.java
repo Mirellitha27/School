@@ -40,9 +40,10 @@ public class CurriculumActivity extends AppCompatActivity implements CurriculumV
 
         RecyclerView recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setHasFixedSize(true);
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getApplicationContext(),LinearLayoutManager.VERTICAL, false);
+        //GridLayoutManager linearLayoutManager = new GridLayoutManager(this, 2);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
         recyclerView.setLayoutManager(linearLayoutManager);
-        RecyclerView.Adapter adapter = new CurriculumAdapter(getApplicationContext(), teacherData);
+        RecyclerView.Adapter adapter = new CurriculumAdapter(teacherData);
         recyclerView.setAdapter(adapter);
 
     }

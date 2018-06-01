@@ -48,7 +48,7 @@ public class ChatFragment extends Fragment implements ChatFragmentView{
         recyclerView.setHasFixedSize(true);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false);
         recyclerView.setLayoutManager(linearLayoutManager);
-        RecyclerView.Adapter adapter = new ChatAdapter(teacherData);
+        RecyclerView.Adapter adapter = new ChatAdapter(getContext(),teacherData);
         recyclerView.setAdapter(adapter);
     }
 }

@@ -49,7 +49,8 @@
             android:screenOrientation="portrait" />
         <activity android:name=".domain.curriculum.view.CurriculumActivity" />
         <activity android:name=".domain.Example" />
-        <activity android:name=".domain.ratings.view.RatingsActivity"></activity>
+        <activity android:name=".domain.ratings.view.RatingsActivity" />
+        <activity android:name=".domain.chat_mine.view.ChatMineActivity"></activity>
     </application>
 
 </manifest>

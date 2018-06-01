@@ -21,8 +21,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         card_view:cardCornerRadius="6dp"
-        card_view:cardElevation="@dimen/space_min"
-        card_view:cardUseCompatPadding="true">
+        card_view:cardElevation="@dimen/space_min">
 
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"

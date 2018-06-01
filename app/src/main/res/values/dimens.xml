@@ -6,5 +6,6 @@
     <dimen name="space_small">8dp</dimen>
     <dimen name="space_avg">16dp</dimen>
     <dimen name="space_big">32dp</dimen>
+    <dimen name="space_huge">64dp</dimen>
 
 </resources>

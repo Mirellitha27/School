@@ -32,11 +32,12 @@
         android:layout_marginEnd="32dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="150dp"
+        card_view:cardCornerRadius="6dp"
+        app:cardElevation="@dimen/space_min"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        card_view:cardCornerRadius="6dp"
         tools:ignore="MissingConstraints">
 
         <TextView

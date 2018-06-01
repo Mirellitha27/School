@@ -1,6 +1,9 @@
 package mireya.com.school.domain.chat.adapter;
 
+import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,11 +14,14 @@ import java.util.List;
 
 import mireya.com.school.R;
 import mireya.com.school.domain.chat.data.ChatData;
+import mireya.com.school.domain.chat_mine.view.ChatMineActivity;
 
 public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ViewHolder> {
+    private Context context;
     private List<ChatData> teacherData;
 
-    public ChatAdapter(List<ChatData> teacherData) {
+    public ChatAdapter(Context context, List<ChatData> teacherData) {
+        this.context = context;
         this.teacherData = teacherData;
     }
 
@@ -28,10 +34,15 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        /*holder.nombre.setText("hola");
-        holder.especialidad.setText("que hay ");*/
         holder.nombre.setText(teacherData.get(position).getNombre());
         holder.especialidad.setText(teacherData.get(position).getEspecialidad());
+        holder.cardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, ChatMineActivity.class);
+                context.startActivity(intent);
+            }
+        });
     }
 
     @Override
@@ -39,14 +50,16 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ViewHolder> {
         return teacherData.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
+    class ViewHolder extends RecyclerView.ViewHolder {
         View mView;
         TextView nombre, especialidad;
-        public ViewHolder(View itemView) {
+        CardView cardView;
+        ViewHolder(View itemView) {
             super(itemView);
             mView = itemView;
             nombre = itemView.findViewById(R.id.tvName);
             especialidad = itemView.findViewById(R.id.tvEspecialidad);
+            cardView = itemView.findViewById(R.id.cardView);
 
         }
     }

@@ -14,11 +14,9 @@ import mireya.com.school.R;
 import mireya.com.school.domain.curriculum.data.CurriculumData;
 
 public class CurriculumAdapter extends RecyclerView.Adapter<CurriculumAdapter.ViewHolder> {
-    private Context context;
     private List<CurriculumData> teacherData;
 
-    public CurriculumAdapter(Context context, List<CurriculumData> teacherData) {
-        this.context = context;
+    public CurriculumAdapter(List<CurriculumData> teacherData) {
         this.teacherData = teacherData;
     }
 
