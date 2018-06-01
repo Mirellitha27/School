@@ -35,21 +35,13 @@ public class SettingsFragment extends Fragment implements SettingsFragmentView{
     }
 
     private void setUpView(View view) {
-
-       /* TextView tvLogout = view.findViewById(R.id.tvSignOff);
-        tvLogout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                goSplash();
-            }
-        });*/
-        /*CardView cardViewLogout = view.findViewById(R.id.cvSignOff);
+        CardView cardViewLogout = view.findViewById(R.id.cvSignOff);
         cardViewLogout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 goSplash();
             }
-        });*/
+        });
     }
 
     @Override
