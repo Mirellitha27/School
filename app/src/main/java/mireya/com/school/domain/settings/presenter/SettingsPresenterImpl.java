@@ -13,4 +13,8 @@ public class SettingsPresenterImpl implements SettingsPresenter {
         interactor = new SettingsInteractorImpl(this);
     }
 
+    @Override
+    public void goSplash() {
+        view.goSplash();
+    }
 }

@@ -5,7 +5,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="@dimen/abc_action_bar_default_height_material"
-    android:background="@android:color/transparent"
+    android:background="@color/colorPrimary"
     tools:ignore="PrivateResource">
 
+    <!--android:background="@android:color/transparent"!-->
 </android.support.v7.widget.Toolbar>

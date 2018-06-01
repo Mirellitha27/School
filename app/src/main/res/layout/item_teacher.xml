@@ -19,7 +19,8 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        card_view:cardCornerRadius="6dp">
+        card_view:cardCornerRadius="6dp"
+        android:elevation="@dimen/space_min">
 
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
