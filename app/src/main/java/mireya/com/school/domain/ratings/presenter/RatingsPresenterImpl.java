@@ -12,4 +12,9 @@ public class RatingsPresenterImpl implements RatingsPresenter {
         this.view = view;
         interactor = new RatingsInteractorImpl(this);
     }
+
+    @Override
+    public void goMain() {
+        view.goMain();
+    }
 }

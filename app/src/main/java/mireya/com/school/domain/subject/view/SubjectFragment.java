@@ -1,5 +1,6 @@
 package mireya.com.school.domain.subject.view;
 
+import android.content.Intent;
 import android.support.v4.app.Fragment;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -14,6 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import mireya.com.school.R;
+import mireya.com.school.domain.ratings.view.RatingsActivity;
 import mireya.com.school.domain.subject.adapter.SubjectAdapter;
 import mireya.com.school.domain.subject.data.SubjectData;
 import mireya.com.school.domain.subject.presenter.SubjectPresenter;
@@ -48,7 +50,13 @@ public class SubjectFragment extends Fragment implements SubjectFragmentView {
         recyclerView.setHasFixedSize(true);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false);
         recyclerView.setLayoutManager(linearLayoutManager);
-        RecyclerView.Adapter adapter = new SubjectAdapter(getContext(), teacherData);
+        RecyclerView.Adapter adapter = new SubjectAdapter(getContext(), presenter, teacherData);
         recyclerView.setAdapter(adapter);
+    }
+
+    @Override
+    public void goRatingsActivity() {
+        Intent intent = new Intent(getContext(), RatingsActivity.class);
+        startActivity(intent);
     }
 }

@@ -20,5 +20,6 @@
     <string name="sign_off">Cerrar sesión</string>
     <string name="my_matters">Mis materias</string>
     <string name="teachers">Profesores</string>
+    <string name="type_message">Escribe tu mensaje</string>
 
 </resources>

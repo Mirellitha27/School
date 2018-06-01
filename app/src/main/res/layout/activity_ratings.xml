@@ -26,6 +26,7 @@
 
     <include layout="@layout/toolbar"/>
 
+    <!--app:cardBackgroundColor="?android:attr/textColorHighlight"-->
     <android.support.v7.widget.CardView
         android:id="@+id/cvTitle"
         android:layout_width="match_parent"
@@ -34,7 +35,6 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="150dp"
         android:elevation="@dimen/activity_horizontal_margin"
-        app:cardBackgroundColor="?android:attr/textColorHighlight"
         app:cardElevation="@dimen/space_min"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"

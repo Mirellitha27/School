@@ -1,7 +1,6 @@
 package mireya.com.school.domain.subject.adapter;
 
-import android.content.Context;
-import android.content.Intent;
+import android.content.Context;;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
@@ -13,15 +12,17 @@ import android.widget.TextView;
 import java.util.List;
 
 import mireya.com.school.R;
-import mireya.com.school.domain.ratings.view.RatingsActivity;
 import mireya.com.school.domain.subject.data.SubjectData;
+import mireya.com.school.domain.subject.presenter.SubjectPresenter;
 
 public class SubjectAdapter extends RecyclerView.Adapter<SubjectAdapter.ViewHolder> {
     private Context context;
+    private SubjectPresenter presenter;
     private List<SubjectData> teacherData;
 
-    public SubjectAdapter(Context context, List<SubjectData> teacherData) {
+    public SubjectAdapter(Context context, SubjectPresenter presenter, List<SubjectData> teacherData) {
         this.context = context;
+        this.presenter = presenter;
         this.teacherData = teacherData;
     }
 
@@ -39,8 +40,7 @@ public class SubjectAdapter extends RecyclerView.Adapter<SubjectAdapter.ViewHold
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(context,RatingsActivity.class);
-                context.startActivity(intent);
+                presenter.goRatingsActivity();
             }
         });
     }
@@ -50,11 +50,11 @@ public class SubjectAdapter extends RecyclerView.Adapter<SubjectAdapter.ViewHold
         return teacherData.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
+    class ViewHolder extends RecyclerView.ViewHolder {
         View mView;
         TextView nombre, especialidad;
         CardView cardView;
-        public ViewHolder(View itemView) {
+        ViewHolder(View itemView) {
             super(itemView);
             mView = itemView;
             nombre = itemView.findViewById(R.id.tvName);

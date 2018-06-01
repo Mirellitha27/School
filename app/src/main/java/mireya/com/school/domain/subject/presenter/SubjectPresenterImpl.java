@@ -12,4 +12,9 @@ public class SubjectPresenterImpl implements SubjectPresenter {
         this.view = view;
         interactor = new SubjectInteractorImpl(this);
     }
+
+    @Override
+    public void goRatingsActivity() {
+        view.goRatingsActivity();
+    }
 }

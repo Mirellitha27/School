@@ -12,4 +12,19 @@ public class ChatMinePresenterImpl implements ChatMinePresenter {
         this.view = view;
         interactor = new ChatMineInteractorImpl(this);
     }
+
+    @Override
+    public void enableButton() {
+        view.enableButton();
+    }
+
+    @Override
+    public void disableButton() {
+        view.disableButton();
+    }
+
+    @Override
+    public void goMain() {
+        view.goMain();
+    }
 }

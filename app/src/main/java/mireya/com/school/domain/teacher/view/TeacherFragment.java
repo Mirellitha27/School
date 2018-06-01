@@ -1,5 +1,6 @@
 package mireya.com.school.domain.teacher.view;
 
+import android.content.Intent;
 import android.support.v4.app.Fragment;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -14,6 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import mireya.com.school.R;
+import mireya.com.school.domain.curriculum.view.CurriculumActivity;
 import mireya.com.school.domain.teacher.adapter.TeacherAdapter;
 import mireya.com.school.domain.teacher.data.TeacherData;
 import mireya.com.school.domain.teacher.presenter.TeacherPresenter;
@@ -49,8 +51,13 @@ public class TeacherFragment extends Fragment implements TeacherFragmentView {
         recyclerView.setHasFixedSize(true);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false);
         recyclerView.setLayoutManager(linearLayoutManager);
-        RecyclerView.Adapter adapter = new TeacherAdapter(getContext(), teacherData);
+        RecyclerView.Adapter adapter = new TeacherAdapter(getContext(), presenter, teacherData);
         recyclerView.setAdapter(adapter);
     }
 
+    @Override
+    public void goCurriculum() {
+        Intent intent = new Intent(getContext(), CurriculumActivity.class);
+        startActivity(intent);
+    }
 }

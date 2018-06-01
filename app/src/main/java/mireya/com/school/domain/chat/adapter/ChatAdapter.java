@@ -1,7 +1,6 @@
 package mireya.com.school.domain.chat.adapter;
 
 import android.content.Context;
-import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
@@ -14,14 +13,16 @@ import java.util.List;
 
 import mireya.com.school.R;
 import mireya.com.school.domain.chat.data.ChatData;
-import mireya.com.school.domain.chat_mine.view.ChatMineActivity;
+import mireya.com.school.domain.chat.presenter.ChatPresenter;
 
 public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ViewHolder> {
     private Context context;
+    private ChatPresenter presenter;
     private List<ChatData> teacherData;
 
-    public ChatAdapter(Context context, List<ChatData> teacherData) {
+    public ChatAdapter(Context context, ChatPresenter presenter, List<ChatData> teacherData) {
         this.context = context;
+        this.presenter = presenter;
         this.teacherData = teacherData;
     }
 
@@ -39,8 +40,7 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ViewHolder> {
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(context, ChatMineActivity.class);
-                context.startActivity(intent);
+                presenter.ChatMineActivity();
             }
         });
     }

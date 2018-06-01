@@ -13,4 +13,9 @@ public class ChatPresenterImpl implements ChatPresenter {
         this.view = view;
         interactor = new ChatInteractorImpl(this);
     }
+
+    @Override
+    public void ChatMineActivity() {
+        view.ChatMineActivity();
+    }
 }

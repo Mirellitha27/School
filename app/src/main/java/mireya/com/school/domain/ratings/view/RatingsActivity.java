@@ -1,16 +1,21 @@
 package mireya.com.school.domain.ratings.view;
 
+import android.content.Intent;
 import android.media.Rating;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
+import android.view.MenuItem;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 import mireya.com.school.R;
+import mireya.com.school.domain.main.view.MainActivity;
 import mireya.com.school.domain.ratings.adapter.RatingsAdapter;
 import mireya.com.school.domain.ratings.data.RatingsData;
 import mireya.com.school.domain.ratings.presenter.RatingsPresenter;
@@ -42,6 +47,11 @@ public class RatingsActivity extends AppCompatActivity implements RatingsView{
     }
 
     private void setUpView() {
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setTitle(" ");
+
         List<RatingsData> teacherData = new ArrayList<>();
         teacherData.add(new RatingsData("80", "primer parcial"));
         teacherData.add(new RatingsData("70", "Segundo parcial"));
@@ -54,5 +64,21 @@ public class RatingsActivity extends AppCompatActivity implements RatingsView{
         recyclerView.setLayoutManager(linearLayoutManager);
         RecyclerView.Adapter adapter = new RatingsAdapter(teacherData);
         recyclerView.setAdapter(adapter);
+    }
+
+    public boolean onOptionsItemSelected(MenuItem menuItem){
+        switch (menuItem.getItemId()){
+            case android.R.id.home:
+                goMain();
+                break;
+        }
+        return true;
+    }
+
+    @Override
+    public void goMain() {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+        finish();
     }
 }

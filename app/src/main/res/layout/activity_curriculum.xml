@@ -14,7 +14,7 @@
         android:layout_height="400dp"
         android:contentDescription="@string/app_name"
         android:scaleType="fitXY"
-        android:src="@drawable/header_profile"
+        android:src="@drawable/header_teacher"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -24,7 +24,7 @@
 
     <include layout="@layout/toolbar"/>
 
-    <de.hdodenhof.circleimageview.CircleImageView
+   <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/avatar"
         android:layout_width="100dp"
         android:layout_height="100dp"

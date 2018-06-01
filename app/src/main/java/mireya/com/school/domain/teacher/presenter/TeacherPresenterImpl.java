@@ -16,4 +16,8 @@ public class TeacherPresenterImpl implements TeacherPresenter {
         interactor = new TeacherInteractorImpl(this);
     }
 
+    @Override
+    public void goCurriculum() {
+        view.goCurriculum();
+    }
 }

@@ -1,5 +1,6 @@
 package mireya.com.school.domain.chat.view;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -18,6 +19,7 @@ import mireya.com.school.domain.chat.adapter.ChatAdapter;
 import mireya.com.school.domain.chat.data.ChatData;
 import mireya.com.school.domain.chat.presenter.ChatPresenter;
 import mireya.com.school.domain.chat.presenter.ChatPresenterImpl;
+import mireya.com.school.domain.chat_mine.view.ChatMineActivity;
 
 public class ChatFragment extends Fragment implements ChatFragmentView{
 
@@ -48,7 +50,14 @@ public class ChatFragment extends Fragment implements ChatFragmentView{
         recyclerView.setHasFixedSize(true);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false);
         recyclerView.setLayoutManager(linearLayoutManager);
-        RecyclerView.Adapter adapter = new ChatAdapter(getContext(),teacherData);
+        RecyclerView.Adapter adapter = new ChatAdapter(getContext(),presenter,teacherData);
         recyclerView.setAdapter(adapter);
+    }
+
+    @Override
+    public void ChatMineActivity() {
+        Intent intent = new Intent(getContext(), ChatMineActivity.class);
+        startActivity(intent);
+
     }
 }
