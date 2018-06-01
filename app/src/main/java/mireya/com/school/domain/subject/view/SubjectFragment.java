@@ -48,7 +48,7 @@ public class SubjectFragment extends Fragment implements SubjectFragmentView {
         recyclerView.setHasFixedSize(true);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false);
         recyclerView.setLayoutManager(linearLayoutManager);
-        RecyclerView.Adapter adapter = new SubjectAdapter(teacherData);
+        RecyclerView.Adapter adapter = new SubjectAdapter(getContext(), teacherData);
         recyclerView.setAdapter(adapter);
     }
 }

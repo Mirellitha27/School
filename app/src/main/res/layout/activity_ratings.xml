@@ -8,8 +8,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="domain.chat.view.ChatFragment">
-
+    tools:context=".domain.ratings.view.RatingsActivity">
 
     <ImageView
         android:id="@+id/imageView"
@@ -17,7 +16,7 @@
         android:layout_height="200dp"
         android:contentDescription="@string/app_name"
         android:scaleType="fitXY"
-        android:src="@drawable/header_chat"
+        android:src="@drawable/header_work"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -32,6 +31,9 @@
         android:layout_marginEnd="32dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="150dp"
+        android:elevation="@dimen/activity_horizontal_margin"
+        app:cardBackgroundColor="?android:attr/textColorHighlight"
+        app:cardElevation="@dimen/space_min"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -41,14 +43,14 @@
 
         <TextView
             android:id="@+id/tvEdit"
+            style="@style/textPrimary"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/teachers"
             android:layout_gravity="center"
+            android:elevation="@dimen/activity_horizontal_margin"
             android:gravity="center"
-            style="@style/textPrimary"/>
+            android:text="@string/my_matters" />
     </android.support.v7.widget.CardView>
-
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recyclerView"
@@ -57,7 +59,6 @@
         android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cvTitle">
-    </android.support.v7.widget.RecyclerView>
+        app:layout_constraintTop_toBottomOf="@+id/cvTitle" />
 
 </android.support.constraint.ConstraintLayout>

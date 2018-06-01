@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:layout_marginEnd="32dp"
+    android:layout_marginStart="32dp"
+    card_view:cardCornerRadius="6dp"
+    card_view:cardElevation="@dimen/space_min"
+    card_view:cardUseCompatPadding="true"
+    android:layout_marginBottom="@dimen/space_small">
+
+    <LinearLayout
+        android:id="@+id/lyConten"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/space_small">
+        <TextView
+            android:id="@+id/tvSubject"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Materia"
+            style="@style/textPrimary"
+            android:layout_marginBottom="@dimen/space_min"/>
+        <TextView
+            android:id="@+id/tvYear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Año"
+            style="@style/textSecondary" />
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

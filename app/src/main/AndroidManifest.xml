@@ -46,8 +46,10 @@
             android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".domain.account.create.view.CreateAccountActivity"
-            android:screenOrientation="portrait"></activity>
-        <activity android:name=".domain.curriculum.view.CurriculumActivity"></activity>
+            android:screenOrientation="portrait" />
+        <activity android:name=".domain.curriculum.view.CurriculumActivity" />
+        <activity android:name=".domain.Example" />
+        <activity android:name=".domain.ratings.view.RatingsActivity"></activity>
     </application>
 
 </manifest>
