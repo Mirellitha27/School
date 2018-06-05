@@ -35,6 +35,7 @@ public class MainActivity extends AppCompatActivity implements MainView{
         if (presenter == null) {
             presenter = new MainPresenterImpl(this);
         }
+
     }
 
     private void setUpView() {
