@@ -14,6 +14,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.airbnb.lottie.LottieAnimationView;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -66,6 +68,11 @@ public class TeacherFragment extends Fragment implements TeacherFragmentView {
             Log.d(TAG, "Conectado");
         }else {
             Log.d(TAG, "no conectado");
+            //LottieAnimationView animationView = new LottieAnimationView();
+
+            //animationView.setAnimation(R.assets.hello_world.json);
+
+            //animationView.playAnimation();
         }
 
     }
